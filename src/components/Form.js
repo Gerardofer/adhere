@@ -64,7 +64,7 @@ class Form extends Component{
       handleSubmit = event => {
         event.preventDefault();
 
-        axios.get(`https://cors-anywhere.herokuapp.com/http://www.app.educationspots.com/api/search/v3/?oAuth=0c74b7f78409a4022a2c4c5a5ca3ee19&&firstname=${this.state.firstName}&lastname=${this.state.lastName}&address=123+Maine+St&zip=${this.state.zip}&city=${this.state.city.toUpperCase()}&state=${this.state.state.toUpperCase()}&email=billstone1ccc%40gmail.com&homephone=${this.state.phone}&programid=${this.state.school}&concentrationid=${this.state.program}&hsgradyear=${this.state.year}&educationlevel=${this.state.level}`)
+        axios.get(`https://cors-anywhere.herokuapp.com/http://www.app.educationspots.com/api/search/v3/?oAuth=0c74b7f78409a4022a2c4c5a5ca3ee19&&firstname=${this.state.firstName}&lastname=${this.state.lastName}&address=${this.state.address}&zip=${this.state.zip}&city=${this.state.city.toUpperCase()}&state=${this.state.state.toUpperCase()}&email=${this.state.email}.com&homephone=${this.state.phone}&programid=${this.state.school}&concentrationid=${this.state.program}&hsgradyear=${this.state.year}&educationlevel=${this.state.level}`)
           .then(response => {
                 this.setState({
                     data: response.data.SEARCHRESULTS,
